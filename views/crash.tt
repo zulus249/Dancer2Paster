@@ -1,0 +1,11 @@
+<% include header.tt %>
+
+<h3 class="text-danger">FAILED!</h3>
+
+DB operation failure.
+<br/><br/>
+
+<a class="btn btn-lg btn-primary" href="<% request.uri_base %>">Add new</a>        
+<a class="btn btn-lg btn-info" href="<% request.uri_base %>/list">Last added</a>
+        
+<% include footer.tt %>

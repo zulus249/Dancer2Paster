@@ -1,0 +1,9 @@
+<% include header.tt %>
+        
+<form action ="<% request.uri_base %>/add" method="post">
+    <textarea name="text" rows="16" placeholder="Please enter or paste your text!" class="form-control"></textarea><br/>
+<button type="submit" class="btn btn-lg btn-primary">Submit</button>
+<a class="btn btn-lg btn-info" href="<% request.uri_base %>/list">Last added</a>
+</form>
+
+<% include footer.tt %>

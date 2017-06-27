@@ -1,0 +1,12 @@
+<% include header.tt %>
+
+<h3>Last added texts:</h3>
+
+<ul class="list-group">
+<% FOREACH entry IN entries %>
+    <li class="list-group-item"><a href="<% request.uri_base %>/item?id=<% entry.0 %>"><% entry.0 %></a> added by <% entry.1 %> on <% entry.2 %> </li>
+<% END %> 
+</ul>
+<a class="btn btn-lg btn-primary" href="<% request.uri_base %>">Add new</a>
+
+<% include footer.tt %>

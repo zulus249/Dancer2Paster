@@ -1,0 +1,6 @@
+<div class="container">
+    <div id="header" class="row" >
+        <h1 id="contents">Dancer2 Paster</h1>
+        <h2>sample pastebin-like app</h2>
+    </div>
+    <div id="content" class="row">

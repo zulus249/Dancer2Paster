@@ -1,0 +1,16 @@
+<% INCLUDE header.tt %>
+<% IF success==1 %>
+    <h3 class="text-success">SUCCESS!</h3>Your text has been added and it is present at the folowing link:<br/>
+<% END %>
+
+<h3><a href=<% request.uri_base %>/item?id=<% entry.0 %>> <% request.uri_base %>/item?id=<% entry.0 %></a>
+<br/><br/>
+&nbsp; &nbsp; &nbsp; added by <% entry.1 %> on <% entry.2 %></h3>
+
+<textarea rows="8" cols="64" readonly autofocus class="form-control">
+    <% entry.3 %>
+</textarea><br/>
+<a class="btn btn-lg btn-primary" href="<% request.uri_base %>">Add new</a>
+<a class="btn btn-lg btn-info" href="<% request.uri_base %>/list">Last added</a>
+
+<% INCLUDE footer.tt %>
