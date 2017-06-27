@@ -7,9 +7,7 @@
 <br/><br/>
 &nbsp; &nbsp; &nbsp; added by <% entry.1 %> on <% entry.2 %></h3>
 
-<textarea rows="8" cols="64" readonly autofocus class="form-control">
-    <% entry.3 %>
-</textarea><br/>
+<textarea rows="8" cols="64" readonly autofocus class="form-control"><% entry.3 %></textarea><br/>
 <a class="btn btn-lg btn-primary" href="<% request.uri_base %>">Add new</a>
 <a class="btn btn-lg btn-info" href="<% request.uri_base %>/list">Last added</a>
 

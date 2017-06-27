@@ -5,6 +5,7 @@ use warnings;
 
 use DBI;
 use Data::UUID;
+use Digest::CRC;
 use Dancer2;
 use File::Slurper 'read_text';
 
@@ -43,7 +44,9 @@ sub add
 {
     (my $self, my $ip, my $text) = @_;
     
-    my $id = Data::UUID->new->create_str();
+    my $ctx = Digest::CRC->new(type=>"crc16");
+    $ctx->add($text);
+    my $id = Data::UUID->new->create_str() . $ctx->hexdigest;
  
     my $dbh = _connect;
     my $sth = $dbh->prepare("insert into entries (id, ip, text) values (?, ?, ?)") or return undef;
@@ -79,4 +82,3 @@ sub getEntry
 }
 
 1;
-
