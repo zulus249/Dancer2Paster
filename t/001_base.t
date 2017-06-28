@@ -2,4 +2,4 @@ use strict;
 use warnings;
 
 use Test::More tests => 1;
-use_ok 'HomeTask';
+use_ok 'Dancer2Paster';

@@ -1,12 +1,12 @@
 use strict;
 use warnings;
 
-use HomeTask;
+use Dancer2Paster;
 use Test::More tests => 2;
 use Plack::Test;
 use HTTP::Request::Common;
 
-my $app = HomeTask->to_app;
+my $app = Dancer2Paster->to_app;
 is( ref $app, 'CODE', 'Got app' );
 
 my $test = Plack::Test->create($app);
